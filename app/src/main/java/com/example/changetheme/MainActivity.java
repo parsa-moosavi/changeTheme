@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void setTheme(Resources.Theme theme) {
-        if (imageView.getVisibility()== View.GONE) {
-//            return;
+        if (imageView.getVisibility()== View.VISIBLE) {
+            return;
         }
 
         int w = linearLayout.getWidth();
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         Animator anim = ViewAnimationUtils.createCircularReveal(linearLayout, w / 2, h / 2, 0f, finalRadius);
         anim.setDuration(400L);
-//        anim. {
+//        anim.doOnEnd {
 //            imageView.setImageDrawable(null);
 //            imageView.setVisibility(View.GONE);
 //        }
